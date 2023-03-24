@@ -12,20 +12,20 @@ char *str, *sep = "";
 va_list list;
 va_start(list, format);
 if (format)
-{       
+{
 while (format[i])
-{       
+{
 switch (format[i])
-{       
+{
 case 'c':
 printf("%s%c", sep, va_arg(list, int));
-break;  
+break;
 case 'i':
 printf("%s%d", sep, va_arg(list, int));
-break;  
+break;
 case 'f':
 printf("%s%f", sep, va_arg(list, double));
-break;  
+break;
 case 's':
 str = va_arg(list, char *);
 if (!str)
